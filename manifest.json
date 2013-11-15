@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "sub-the-news",
+  "description": "this extension performs the substitutions listed in XKCD #1288 ( http://xkcd.com/1288/ ) to configured sites.",
+  "version": "0.1",
+
+  "content_scripts": [
+    {
+      "matches": ["http://www.politico.com/*"],
+      "js": ["sub_the_news.js"],
+      "all_frames":true
+    }
+  ],
+  "page_action": {
+    "default_icon": {
+      "19": "sub-19-px.png"
+    },
+    "default_title": "sub the news"
+  }
+}
+
