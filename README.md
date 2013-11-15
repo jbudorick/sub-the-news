@@ -1,2 +1,2 @@
-xkcd-sub-the-news
-=================
+sub-the-news
+============
