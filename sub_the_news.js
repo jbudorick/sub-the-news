@@ -16,15 +16,13 @@
 // could not be reached for comment -> is guilty and everyone knows it
 
 var recursiveS = function(node, searchRe, replacement) {
-  if (node.childNodes.length == 0)
-  {
+  if (node.childNodes.length == 0) {
     node.textContent = node.textContent.replace(searchRe, replacement, "gi");
+    return;
   }
-  else
-  {
-    for (var i = 0; i < node.childNodes.length; ++i) {
-      recursiveS(node.childNodes[i], searchRe, replacement);
-    }
+
+  for (var i = 0; i < node.childNodes.length; ++i) {
+    recursiveS(node.childNodes[i], searchRe, replacement);
   }
 }
 
